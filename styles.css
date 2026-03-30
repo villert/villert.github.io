@@ -244,16 +244,18 @@ body {
 
 /* Skills */
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     max-width: 1000px;
     margin: 0 auto;
 }
 
 .skill-category {
+    flex: 1;
+    min-width: 250px;
     background-color: #f9f9f9;
-    padding: 2rem;
+    padding: 2rem 2rem 1rem 2rem;
     border-radius: 8px;
     border: 1px solid #eee;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -273,12 +275,15 @@ body {
 }
 
 .skill-category li {
-    margin-bottom: 0.5rem;
     padding: 0.5rem;
     background-color: #fff;
     border-radius: 6px;
     font-size: 0.95rem;
     box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.skill-category li:not(:last-child) {
+    margin-bottom: 0.5rem;
 }
 
 /* Projects */
